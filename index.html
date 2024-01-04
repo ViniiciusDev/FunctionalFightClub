@@ -3,7 +3,39 @@
    <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+      <!-- CSS Import -->
+      <link rel="stylesheet" href="public/css/style.css" />
+
       <title>Functional Fight Club</title>
    </head>
-   <body></body>
+   <body>
+      <div class="fight-arena">
+         <div id="char">
+            <div class="lifebar">
+               <div class="life"></div>
+            </div>
+            <strong class="name">---</strong>
+            <div>
+               <button class="attack-btn">Attack</button>
+            </div>
+         </div>
+
+         <div id="enemy">
+            <div class="lifebar">
+               <div class="life"></div>
+            </div>
+            <strong class="name">---</strong>
+            <div>
+               <button class="attack-btn">attack</button>
+            </div>
+         </div>
+      </div>
+
+      <ul class="log"></ul>
+
+      <!-- Scripts -->
+      <script src="public/js/script.js"></script>
+      <script src="public/js/functions.js"></script>
+   </body>
 </html>

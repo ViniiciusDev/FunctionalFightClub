@@ -1,0 +1,33 @@
+.fight-arena
+{
+   display: flex;
+   gap: 20px;
+}
+
+#char,
+#enemy
+{
+   flex: 1;
+}
+
+.lifebar
+{
+   height: 10px;
+   border: 1px solid #333;
+   border-radius: 5px;
+}
+
+.lifebar .life
+{
+   height: inherit;
+   background-color: #ff0000;
+   border-radius: 5px;
+   width: 10%;
+}
+
+.log
+{
+   border: 1px solid #999;
+   height: 200px;
+   overflow-y: scroll;
+}
