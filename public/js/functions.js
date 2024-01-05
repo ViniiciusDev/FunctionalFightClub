@@ -56,3 +56,41 @@ const createWolf = () => {
       defense: 8
    }
  }
+
+ // Creating Arena ----------------------------
+ const stage = {
+      player: null,
+      npc: null,
+      playerElement: null,
+      npcElement: null,
+
+      start(player, npc, playerElement, npcElement)   {
+         // ? Take information from the player and the npc.
+         this.player = player;
+         this.npc = npc;
+         this.playerElement = playerElement;
+         this.npcElement = npcElement;
+
+         // ? Take Attack Btn
+         this.playerElement.querySelector('.attack-btn').addEventListener('click', () => this.doAttack(this.player, this.npc));
+         this.npcElement.querySelector('.attack-btn').addEventListener('click', () => this.doAttack(this.npc, this.player));
+
+         // ? Update Function
+         this.update();
+      },
+
+      update() {
+         this.playerElement.querySelector('.name').innerHTML = `${this.player.name} - ${this.player.life.toFixed(1)} HP`;
+         let playerPct = (this.player.life / this.player.maxLife) * 100;
+         this.playerElement.querySelector('.life').style.width = `${playerPct}%`
+
+         this.npcElement.querySelector('.name').innerHTML = `${this.npc.name} - ${this.npc.life.toFixed(1)} HP`;
+         let npcPct = (this.npc.life / this.npc.maxLife) * 100;
+         this.npcElement.querySelector('.life').style.width = `${npcPct}%`;
+      },
+
+      // ? Attack Function
+      doAttack(attacking, attacked)  {
+
+      }
+ }
